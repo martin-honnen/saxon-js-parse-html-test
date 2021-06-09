@@ -1,0 +1,9 @@
+<html>
+  <head>
+    <title>Test</title>
+  </head>
+  <body>
+    <h1>Test</h1>
+    <html-data><![CDATA[<p id=p1>Paragraph 1.<p>Paragraph 2.<img src=foo.svg alt=foo>]]></html-data>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <script src="../Saxon-JS-22/SaxonJS2.rt.js"></script>
+    <script>
+        document.addEventListener(
+            'DOMContentLoaded',
+            function (evt) {
+                SaxonJS.transform({
+                    stylesheetLocation: 'xslt/test-override-saxon-parse.sef.json',
+                    sourceLocation: 'xml/sample2.xml',
+                    destination: 'appendToBody'
+                }, 'async')
+            },
+            false
+        )
+    </script>
+</head>
+<body>
+    <h1>Test</h1>
+</body>
+</html>
