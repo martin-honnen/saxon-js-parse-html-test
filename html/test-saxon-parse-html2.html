@@ -8,8 +8,8 @@
             'DOMContentLoaded',
             function (evt) {
                 SaxonJS.transform({
-                    stylesheetLocation: 'xslt/test-override-saxon-parse.sef.json',
-                    sourceLocation: 'xml/sample2.xml',
+                    stylesheetLocation: '../xslt/test-override-saxon-parse.sef.json',
+                    sourceLocation: '../xml/sample2.xml',
                     destination: 'appendToBody'
                 }, 'async')
             },
