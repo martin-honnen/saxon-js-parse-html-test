@@ -6,6 +6,8 @@
 </head>
 <body>
     <h1>Some tests to see whether the <code>saxon:parse-html</code> function can be implemented for client-side XSLT 3 with Saxon-JS 2 using JavaScript</h1>
+    <p>Saxon Java PE and EE implement an extension function <code>saxon:parse-html</code> to parse a string of HTML markup into an XDM document node.
+       Here I try to implement a replacement for that function using <code>new DOMParser().parseFromString(html, 'text/html')</code> called using <code>ixsl:eval</code> in XSLT 3 run in Saxon-JS 2.</p>
     <ul>
         <li>
             <a href="html/test-saxon-parse-html2.html">Successful use of <code>DOMParser</code> from XSLT 3 run by Saxon-JS 2</a>
