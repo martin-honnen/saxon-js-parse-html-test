@@ -7,7 +7,7 @@
   exclude-result-prefixes="#all"
   expand-text="yes">
 
-  <xsl:function name="saxon:parse-html" as="document-node()" use-when="system-property('xsl:product-name') = 'Saxon-JS'">
+  <xsl:function name="saxon:parse-html" as="document-node()" use-when="system-property('xsl:product-name') = 'SaxonJS'">
     <xsl:param name="html" as="xs:string"/>
     <xsl:sequence select="ixsl:eval('new DOMParser()') => ixsl:call('parseFromString', [$html, 'text/html'])"/>
   </xsl:function>

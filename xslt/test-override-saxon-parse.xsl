@@ -16,17 +16,10 @@
 
   <xsl:template match="html-data">
     <div>
-      <xsl:apply-templates select="saxon:parse-html(.)/html/body/node()" mode="strip-html-namespace"/>
+      <xsl:apply-templates select="saxon:parse-html(.)/html/body/node()"/>
     </div>
   </xsl:template>
 
-  <xsl:mode name="strip-xhtml-namespace" on-no-match="shallow-copy"/>
-
-  <xsl:template match="*" mode="strip-xhtml-namespace" xpath-default-namespace="http://www.w3.org/1999/xhtml">
-    <xsl:element name="{local-name()}" namespace="">
-      <xsl:apply-templates select="@*"/>
-      <xsl:apply-templates/>
-    </xsl:element>
-  </xsl:template>
+  <xsl:mode on-no-match="shallow-copy"/>
 
 </xsl:stylesheet>
